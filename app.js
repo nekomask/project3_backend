@@ -24,7 +24,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use('/items', itemController);
-
-app.listen(3001, () => {
+const port = process.env.PORT || 3001
+app.listen(port, () => {
     console.log('app is running')
 })
