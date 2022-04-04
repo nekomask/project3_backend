@@ -5,6 +5,7 @@ const cors = require('cors');
 const mongoose = require("mongoose");
 const morgan = require('morgan')
 const app = express();
+const session = require('express-session');
 const itemController = require("./controllers/itemController")
 
 const mongoURI = process.env.MONGO_URI || 'mongodb://localhost:27017/karolin_mongoose_store'
@@ -22,6 +23,7 @@ app.use(morgan('short'))
 app.use(cors())
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
 
 app.use('/items', itemController);
 const port = process.env.PORT || 3001

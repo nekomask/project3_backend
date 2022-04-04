@@ -3,8 +3,11 @@ const Schema = mongoose.Schema;
 
 const itemSchema = new Schema({
 productName: {type:String},
+color: {type:String},
 frameType: {type: String },
 frameHeight: {type: String},
+forkLength: {type: String},
+headTubeLength: {type: String},
 forkBrand: {type: String},
 forkType: {type: String},
 headsetSize: {type: String},
